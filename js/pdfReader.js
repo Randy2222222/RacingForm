@@ -3,6 +3,7 @@
 
 (function () {
  // find pdfjs global
+ 
   const pdfjsLib = window['pdfjs-dist/build/pdf'] || window.pdfjsLib || null;
 if (!pdfjsLib) {
    console.error("pdfReader: pdfjsLib not found. Make sure pdf.min.js is in <head>.");
@@ -66,7 +67,7 @@ if (window.parseHorseBlockFull && window._pdfReader.parsedPP) {
       updateStatus("Error loading PDF: " + (err && err.message ? err.message : String(err)));
       return false;
     }
-  }
+  
 
   // Handler attached to <input id="pdfFile">
   async function handleFileInputChange(event) {
