@@ -127,45 +127,23 @@ if (window.parseHorseBlockFull && window._pdfReader.parsedPP) {
     alert("No PDF loaded. Please upload a Brisnet PDF first.");
     return;
   }
-
   // 🔹 At this point the PDF is loaded AND Parsed
   const pp = window._pdfReader.parsedPP;
   if (!pp || !pp.length) {
     alert("Parsing failed — no PP data found.");
     return;
   }
-// } commenting out bracket I think this is a mistake moving it down ❔
-  // New code for fomatting ⬇️
-  // ---------- FORMATTER ----------
-try {
- //console.log("READER OBJECT:", window._pdfReader);🔥
- // console.log("FULL TEXT:", window._pdfReader.fullText);🔥
-  const horses = parseText(window._pdfReader.fullText);
-  const output = formatHorses(horses);
-
-  // show in your output box
-  const outBox = document.getElementById("output");
-  if (outBox) outBox.textContent = output;
-
-  console.log("Formatter OK");
-} catch (err) {
-  console.error("Formatter error:", err);
 }
- } // moved bracket down marked original with white ❓
-  // New code for formatting end ⬆️
-  
   // For now, just display the JSON in #output 
-  // Comment out working section ⬇️
- // const out = document.getElementById("output");
-//  let text = "";
-   //  for (let h of pp) {
-    // text += "------------------------------------\n";
-     // text += h.raw + "\n\n";
-    // out.textContent = text; 
- // console.log("CREATE OK — PP Parsed:", pp);
-// }
-// }
-   // End of working section ⬆️ 
+ const out = document.getElementById("output");
+  let text = "";
+   for (let h of pp) {
+     text += "------------------------------------\n";
+     text += h.raw + "\n\n";
+    out.textContent = text; 
+   console.log("CREATE OK — PP Parsed:", pp);
+ }
+  }
  // Attach on DOM ready (non-blocking)
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
