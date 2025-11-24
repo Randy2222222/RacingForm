@@ -67,7 +67,7 @@ if (window.parseHorseBlockFull && window._pdfReader.parsedPP) {
       updateStatus("Error loading PDF: " + (err && err.message ? err.message : String(err)));
       return false;
     }
-  
+  }
 
   // Handler attached to <input id="pdfFile">
   async function handleFileInputChange(event) {
