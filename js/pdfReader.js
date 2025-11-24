@@ -134,7 +134,7 @@ if (window.parseHorseBlockFull && window._pdfReader.parsedPP) {
     alert("Parsing failed — no PP data found.");
     return;
   }
-}
+
   // For now, just display the JSON in #output 
  const out = document.getElementById("output");
   let text = "";
