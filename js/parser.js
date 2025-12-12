@@ -8,7 +8,7 @@ import { GLYPHS } from "./glyphMap.js";
 
 const SUPERSCRIPTS = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
 
-const GLYPHS_TO_DISPLAY = ["Ⓣ","Ⓐ","ⓧ","🅃","�"]
+const GLYPHS_TO_DISPLAY = ["Ⓣ","Ⓐ","ⓧ","🅃","�"];
 
 // --- Universal wrapper so file works both in browser and Node ---
 (function (global) {
