@@ -5,13 +5,6 @@
 // Also module.exports for Node.
 import { GLYPH_DIGITS } from "./glyphMap.js";
 
-// Make the little numbers for leader times
-const SUPERSCRIPTS = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
-function toSuperscript(n) {
-  if (n == null) return "";
-  const idx = Number(n);
-  return Number.isInteger(idx) ? (SUPERSCRIPTS[idx] || "") : "";
-}
 // --- Universal wrapper so file works both in browser and Node ---
 (function (global) {
   'use strict';
