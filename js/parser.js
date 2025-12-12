@@ -3,12 +3,6 @@
 // Drop into your project as js/parser.js and include BEFORE pdfReader.js
 // Exposes: window.parsePPTable(text), window.parseHorseBlockFull(blockOrRaw), window.parseText(text)
 // Also module.exports for Node.
-import { GLYPH_DIGITS } from "./glyphMap.js";
-import { GLYPHS } from "./glyphMap.js";
-
-const SUPERSCRIPTS = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
-
-const GLYPHS_TO_DISPLAY = ["Ⓣ","Ⓐ","ⓧ","🅃","�"];
 
 // --- Universal wrapper so file works both in browser and Node ---
 (function (global) {
